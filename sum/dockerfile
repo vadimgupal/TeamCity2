@@ -1,8 +1,7 @@
 FROM rust:latest
 
-WORKDIR ./TeamCity2/sum
-COPY . .
+COPY ./ ./
 
-RUN cargo install --path .  
+RUN cargo build --release
 
-CMD ["sum"]
+CMD ["./target/release/sum"]
