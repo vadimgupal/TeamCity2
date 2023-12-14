@@ -1,8 +1,22 @@
-f main() {
+fn main() {
 println!("{}",add_numbers(2,4));
 }
 
 
 fn add_numbers(a: i32, b: i32) -> i32 {
 a + b
+}
+
+#[cfg(test)]
+mod tests {
+
+    use crate::add_numbers;
+
+    #[test]
+    fn test1() {
+        assert_equal!(add_numbers(2,4),6);
+        assert_equal!(add_numbers(-1,2),1);
+        assert_equal!(add_numbers(2,0),2);
+        assert_equal!(add_numbers(-1,-2),-3);
+    }
 }
