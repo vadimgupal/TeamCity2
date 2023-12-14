@@ -1,4 +1,4 @@
-fn main() {
+ main() {
 println!("{}",add_numbers(2,4));
 }
 
