@@ -1,0 +1,8 @@
+FROM rust:latest
+
+WORKDIR ./TeamCity2/sum
+COPY . .
+
+RUN cargo install --path .  
+
+CMD ["sum"]
