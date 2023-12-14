@@ -1,4 +1,4 @@
- main() {
+f main() {
 println!("{}",add_numbers(2,4));
 }
 
